@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>Stencil Component Starter</title>
+
+    <script type="module" src="/build/rds-components.esm.js"></script>
+    <script nomodule src="/build/rds-components.js"></script>
+
+    <link rel="stylesheet" href="/build/rds-components.css">
+  </head>
+  <body>
+    <rds-dialog 
+      id="dialog"
+      variant="primary"
+      size="small"
+      heading="Remove item"
+      buttons='[
+        {"text": "Cancel", "variant": "link", }, 
+        {"text": "Confirm", "variant": "primary", }
+      ]'
+    >
+      <p>Are you sure?</p>
+    </rds-dialog>
+
+    <div class="container">
+      <div class="row">
+        <h1>UI Components</h1>
+      </div>
+      <div class="row">
+        <h2>Buttons</h2>
+        <rds-button variant="primary" size="large">Button</rds-button>
+        <rds-button variant="secondary" size="large">Button</rds-button>
+        <rds-button variant="tertiary" size="large">Button</rds-button>
+        <rds-button variant="danger" size="large">Button</rds-button>
+        <rds-button variant="success" size="large">Button</rds-button>
+        <rds-button variant="link" size="large">Button</rds-button>
+      </div>
+      <div class="row">
+        <rds-button variant="primary">Button</rds-button>
+        <rds-button variant="secondary">Button</rds-button>
+        <rds-button variant="tertiary">Button</rds-button>
+        <rds-button variant="danger">Button</rds-button>
+        <rds-button variant="success">Button</rds-button>
+        <rds-button variant="link">Button</rds-button>
+      </div>
+      <div class="row">
+        <rds-button variant="primary" size="small">Button</rds-button>
+        <rds-button variant="secondary" size="small">Button</rds-button>
+        <rds-button variant="tertiary" size="small">Button</rds-button>
+        <rds-button variant="danger" size="small">Button</rds-button>
+        <rds-button variant="success" size="small">Button</rds-button>
+        <rds-button variant="link" size="small">Button</rds-button>
+      </div>
+      <div class="row">
+        <h2>Dialog</h2>
+        <rds-button id="open-dialog" variant="primary">Open dialog</rds-button>
+      </div>
+    </div>
+
+  </body>
+  <script>
+    const button = document.querySelector('#open-dialog');
+    const dialog = document.querySelector('#dialog');
+
+    button.addEventListener('click', () => {
+      dialog.isOpen = true;
+    })
+
+    dialog.addEventListener('action', () => {
+      console.log('Confirm pressed')
+    })
+  </script>
+</html>
