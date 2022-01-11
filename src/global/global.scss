@@ -1,6 +1,8 @@
-@import url(./tokens/_border-radius.scss);
 @import url(./tokens/_colors.scss);
+@import url(./tokens/_radius.scss);
+@import url(./tokens/_shadow.scss);
 @import url(./tokens/_spacing.scss);
+@import url(./tokens/_time.scss);
 @import url(./tokens/_typography.scss);
 
 *,
@@ -22,14 +24,36 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin-bottom: var(--spacing-m);
+  padding-top:  var(--spacing-m);
+  margin-bottom: var(--spacing-s);
   font-weight: var(--font-weight-medium);
 }
 
 h1 {
   font-weight: var(--font-weight-book);
-  font-size: var(--font-size-xxxxl);
+  font-size: var(--font-size-xxxl);
   color: var(--color-cyan);
+  padding: 0;
+}
+
+h2 {
+  font-size: var(--font-size-xxl);
+}
+
+h3 {
+  font-size: var(--font-size-xl);
+}
+
+h4 {
+  font-size: var(--font-size-l);
+}
+
+h5 {
+  font-size: var(--font-size-m);
+}
+
+h6 {
+  font-size: var(--font-size-s);
 }
 
 p {
@@ -37,7 +61,7 @@ p {
 }
 
 .container {
-  max-width: 80vw;
+  max-width: 60vw;
   margin: 0 auto;
   padding: var(--spacing-xxxl);
 }

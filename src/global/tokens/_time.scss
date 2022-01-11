@@ -1,0 +1,15 @@
+:root {
+  /*
+    Time
+  */
+  --time-instantly: 0s;
+
+  /* Hover effects, fading, scaling */
+  --time-x-fast: 0.1s;
+  --time-fast: 0.2s;
+
+  /* Large moves, complex easing */
+  --time-medium: 0.3s;
+  --time-slow: 0.4s;
+  --time-x-slow: 0.5s;
+}

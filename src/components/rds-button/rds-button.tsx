@@ -24,16 +24,23 @@ export class RdsButton {
    * Is the button full width?
    */
   @Prop() fullWidth?: boolean;
+  /**
+   * Is the button disabled?
+   */
+  @Prop() disabled?: boolean;
 
   render() {
     return (
       <button 
+        type="button"
+        disabled={this.disabled && true}
         class={[
           "rds-button",
           this.size && `rds-button--${this.size}`,
           this.variant && `rds-button--${this.variant}`,
           this.fullWidth && "rds-button--full",
         ].join(" ")}
+
       >
         <slot />
       </button>

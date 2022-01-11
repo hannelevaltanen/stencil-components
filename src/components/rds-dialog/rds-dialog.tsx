@@ -1,4 +1,4 @@
-import { Component, h, Prop, State, Event, EventEmitter, } from '@stencil/core';
+import { Component, h, Prop, } from '@stencil/core';
 
 @Component({
   tag: 'rds-dialog',
@@ -43,32 +43,6 @@ export class RdsDialog {
    * Is the dialog open?
    */
   @Prop() isOpen: boolean;
-  /**
-   * What buttons for the footer?
-   */
-  @Prop() buttons: string;
-  
-  /**
-   * Stae for our buttons array
-   */
-  @State() _buttons: Array<any>
-
-  // Watch for data
-  arrayDataWatcher(buttons) {
-    if (typeof buttons === 'string') {
-      this._buttons = JSON.parse(buttons);
-    } else {
-      this._buttons = buttons;
-    }
-  }
-
-  // Events
-  @Event() private action: EventEmitter;
-
-  // before the compinent loads, we need to convert rhw buttons string to an array
-  componentWillLoad() {
-    this.arrayDataWatcher(this.buttons);
-  }
 
   /**
    * Functions
@@ -76,10 +50,6 @@ export class RdsDialog {
   private handleCancel = () => {
     this.isOpen = false;
   };
-
-  private handleAction = () => {
-    this.action.emit();
-  }
 
   render() {
     return (
@@ -104,19 +74,9 @@ export class RdsDialog {
           <div class="rds-dialog__footer">
             <rds-button variant="link" onClick={this.closable && this.handleCancel}>Cancel</rds-button>
             <rds-button variant={this.variant}>Confirm</rds-button>
-
-            {/* {this._buttons.map((button, i) => (
-              <rds-button 
-                onClick={i === 0 ? this.handleCancel: this.handleAction}
-                variant={button.variant}
-              >
-                {button.text}
-              </rds-button>
-            ))} */}
           </div>
         </div>
       </div>
     );
   }
-
 }
