@@ -22,6 +22,10 @@ export namespace Components {
     }
     interface RdsButton {
         /**
+          * Is the button disabled?
+         */
+        "disabled"?: boolean;
+        /**
           * Is the button full width?
          */
         "fullWidth"?: boolean;
@@ -115,6 +119,10 @@ declare namespace LocalJSX {
     }
     interface RdsButton {
         /**
+          * Is the button disabled?
+         */
+        "disabled"?: boolean;
+        /**
           * Is the button full width?
          */
         "fullWidth"?: boolean;
@@ -149,7 +157,6 @@ declare namespace LocalJSX {
           * Is the dialog open?
          */
         "isOpen"?: boolean;
-        "onAction"?: (event: CustomEvent<any>) => void;
         /**
           * What size?
          */

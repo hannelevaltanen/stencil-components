@@ -1,4 +1,4 @@
-import { B as BUILD, c as consoleDevInfo, p as plt, w as win, H, d as doc, N as NAMESPACE, a as promiseResolve, b as bootstrapLazy } from './index-266c1983.js';
+import { B as BUILD, c as consoleDevInfo, p as plt, w as win, H, d as doc, N as NAMESPACE, a as promiseResolve, b as bootstrapLazy } from './index-369666d5.js';
 import { g as globalScripts } from './app-globals-0f993ce5.js';
 
 /*
@@ -121,5 +121,5 @@ const patchCloneNodeFix = (HTMLElementPrototype) => {
 
 patchBrowser().then(options => {
   globalScripts();
-  return bootstrapLazy([["rds-button",[[6,"rds-button",{"variant":[1],"size":[1],"fullWidth":[4,"full-width"]}]]],["rds-dialog",[[1,"rds-dialog",{"heading":[1537],"variant":[1],"size":[1],"closable":[4],"isOpen":[4,"is-open"],"buttons":[1],"_buttons":[32]}]]],["my-component",[[1,"my-component",{"first":[1],"middle":[1],"last":[1]}]]]], options);
+  return bootstrapLazy([["rds-button",[[6,"rds-button",{"variant":[1],"size":[1],"fullWidth":[4,"full-width"],"disabled":[4]}]]],["rds-dialog",[[1,"rds-dialog",{"heading":[1537],"variant":[1],"size":[1],"closable":[4],"isOpen":[4,"is-open"],"buttons":[1],"_buttons":[32]}]]],["my-component",[[1,"my-component",{"first":[1],"middle":[1],"last":[1]}]]]], options);
 });
