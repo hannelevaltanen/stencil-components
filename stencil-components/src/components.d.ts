@@ -34,6 +34,10 @@ export namespace Components {
          */
         "size"?: "small" | "medium" | "large";
         /**
+          * What type of button is this?
+         */
+        "type"?: "button" | "submit" | "reset";
+        /**
           * What variant to use?
          */
         "variant"?: | "primary"
@@ -44,10 +48,6 @@ export namespace Components {
     | "link";
     }
     interface RdsDialog {
-        /**
-          * What buttons for the footer?
-         */
-        "buttons": string;
         /**
           * Is the dialog open?
          */
@@ -131,6 +131,10 @@ declare namespace LocalJSX {
          */
         "size"?: "small" | "medium" | "large";
         /**
+          * What type of button is this?
+         */
+        "type"?: "button" | "submit" | "reset";
+        /**
           * What variant to use?
          */
         "variant"?: | "primary"
@@ -141,10 +145,6 @@ declare namespace LocalJSX {
     | "link";
     }
     interface RdsDialog {
-        /**
-          * What buttons for the footer?
-         */
-        "buttons"?: string;
         /**
           * Is the dialog open?
          */
