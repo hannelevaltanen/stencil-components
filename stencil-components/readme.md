@@ -53,6 +53,33 @@ When creating new component tags, we recommend _not_ using `stencil` in the comp
 Instead, use a prefix that fits your company or any name for a group of related components. For example, all of the Ionic generated web components use the prefix `ion`.
 
 
+## Storybook integration
+
+To start documenting components to Storybook, run:
+
+```bash
+npm run story
+```
+
+Stories are located in the components folder:
+
+```bash
+vd-component-library/
+├── react-components/
+└── stencil-components/
+    └── src/
+        └── components/
+        │   └── test/
+        │   └── rds-button.scss
+        │   └── rds-button.stories.js
+        │   └── rds-button.tsx
+        │   └── readme.md
+        └── index.ts
+```
+
+For more information, check out [Storybook docs](https://storybook.js.org/docs/web-components/essentials/controls). 
+
+
 ## Using this component
 
 There are three strategies we recommend for using web components built with Stencil.
@@ -60,7 +87,6 @@ There are three strategies we recommend for using web components built with Sten
 The first step for all three of these strategies is to [publish to NPM](https://docs.npmjs.com/getting-started/publishing-npm-packages).
 
 ### Script tag
-
 - Put a script tag similar to this `<script type='module' src='https://unpkg.com/my-component@0.0.1/dist/my-component.esm.js'></script>` in the head of your index.html
 - Then you can use the element anywhere in your template, JSX, html etc
 
