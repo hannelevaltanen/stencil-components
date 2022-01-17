@@ -22,13 +22,13 @@ export namespace Components {
     }
     interface RdsButton {
         /**
+          * Is the button full width?
+         */
+        "block"?: boolean;
+        /**
           * Is the button disabled?
          */
         "disabled"?: boolean;
-        /**
-          * Is the button full width?
-         */
-        "fullWidth"?: boolean;
         /**
           * How large should the button be?
          */
@@ -149,13 +149,13 @@ declare namespace LocalJSX {
     }
     interface RdsButton {
         /**
+          * Is the button full width?
+         */
+        "block"?: boolean;
+        /**
           * Is the button disabled?
          */
         "disabled"?: boolean;
-        /**
-          * Is the button full width?
-         */
-        "fullWidth"?: boolean;
         /**
           * How large should the button be?
          */

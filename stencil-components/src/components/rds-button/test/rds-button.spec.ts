@@ -9,9 +9,7 @@ describe('rds-button', () => {
     });
     expect(page.root).toEqualHtml(`
       <rds-button>
-        <mock:shadow-root>
-          <slot></slot>
-        </mock:shadow-root>
+        <button class="rds-button rds-button--medium rds-button--primary" type="button"></button>
       </rds-button>
     `);
   });
