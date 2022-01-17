@@ -151,6 +151,23 @@
 
 :root {
   /*
+    Sizing  
+  */
+  --sizing-xxxxxl: 64px;
+  --sizing-xxxxl: 56px;
+  --sizing-xxxl: 48px;
+  --sizing-xxl: 40px;
+  --sizing-xl: 32px;
+  --sizing-l: 24px;
+  --sizing-m: 16px;
+  --sizing-s: 12px;
+  --sizing-xs: 8px;
+  --sizing-xxs: 4px;
+  --sizing-xxxs: 2px;
+}
+
+:root {
+  /*
     Spacing  
   */
   --spacing-xxxxxl: 64px;
@@ -278,7 +295,7 @@ em {
   font-style: normal;
 }
 
-a {
+a:not([class]) {
   color: var(--color-primary);
   transition: var(--time-medium) ease;
   text-decoration: none;
@@ -286,7 +303,7 @@ a {
   padding: 0 var(--spacing-xxxs) 0;
   border-radius: 2px 2px 0 0;
 }
-a:hover {
+a:not([class]):hover {
   color: var(--color-primary-hover);
   text-decoration: none;
   background-color: var(--color-cyan-10);
@@ -373,9 +390,8 @@ p {
 .rds-nav__link {
   display: block;
   color: inherit;
-  border: none;
-  border-radius: 0;
   padding: var(--spacing-s) var(--spacing-m);
+  text-decoration: none;
 }
 .rds-nav__link:hover {
   color: var(--color-white);

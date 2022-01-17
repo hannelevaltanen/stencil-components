@@ -1,4 +1,4 @@
-import { B as BUILD, c as consoleDevInfo, p as plt, w as win, H, d as doc, N as NAMESPACE, a as promiseResolve, b as bootstrapLazy } from './index-998c6be9.js';
+import { B as BUILD, c as consoleDevInfo, p as plt, w as win, H, d as doc, N as NAMESPACE, a as promiseResolve, b as bootstrapLazy } from './index-ad30fb29.js';
 import { g as globalScripts } from './app-globals-0f993ce5.js';
 
 /*
@@ -121,5 +121,5 @@ const patchCloneNodeFix = (HTMLElementPrototype) => {
 
 patchBrowser().then(options => {
   globalScripts();
-  return bootstrapLazy([["rds-button",[[6,"rds-button",{"type":[1],"size":[1],"variant":[1],"fullWidth":[4,"full-width"],"disabled":[4]}]]],["rds-dialog",[[1,"rds-dialog",{"heading":[1537],"variant":[1],"size":[1],"closable":[4],"isOpen":[4,"is-open"]}]]],["my-component",[[1,"my-component",{"first":[1],"middle":[1],"last":[1]}]]]], options);
+  return bootstrapLazy([["rds-dialog",[[1,"rds-dialog",{"heading":[1537],"variant":[1],"size":[1],"closable":[4],"isOpen":[4,"is-open"]}]]],["my-component",[[1,"my-component",{"first":[1],"middle":[1],"last":[1]}]]],["rds-radio",[[2,"rds-radio",{"value":[1],"label":[1]}]]],["rds-radio-group",[[1,"rds-radio-group",{"label":[1]}]]],["rds-button",[[6,"rds-button",{"type":[1],"size":[1],"variant":[1],"fullWidth":[4,"full-width"],"disabled":[4]}]]]], options);
 });

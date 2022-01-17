@@ -76,6 +76,22 @@ export namespace Components {
    | "success"
    | "link";
     }
+    interface RdsRadio {
+        /**
+          * What is the heading for this dialog?
+         */
+        "label": string;
+        /**
+          * What is the heading for this dialog?
+         */
+        "value": string;
+    }
+    interface RdsRadioGroup {
+        /**
+          * What is the heading for this dialog?
+         */
+        "label": string;
+    }
 }
 declare global {
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
@@ -96,10 +112,24 @@ declare global {
         prototype: HTMLRdsDialogElement;
         new (): HTMLRdsDialogElement;
     };
+    interface HTMLRdsRadioElement extends Components.RdsRadio, HTMLStencilElement {
+    }
+    var HTMLRdsRadioElement: {
+        prototype: HTMLRdsRadioElement;
+        new (): HTMLRdsRadioElement;
+    };
+    interface HTMLRdsRadioGroupElement extends Components.RdsRadioGroup, HTMLStencilElement {
+    }
+    var HTMLRdsRadioGroupElement: {
+        prototype: HTMLRdsRadioGroupElement;
+        new (): HTMLRdsRadioGroupElement;
+    };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
         "rds-button": HTMLRdsButtonElement;
         "rds-dialog": HTMLRdsDialogElement;
+        "rds-radio": HTMLRdsRadioElement;
+        "rds-radio-group": HTMLRdsRadioGroupElement;
     }
 }
 declare namespace LocalJSX {
@@ -173,10 +203,28 @@ declare namespace LocalJSX {
    | "success"
    | "link";
     }
+    interface RdsRadio {
+        /**
+          * What is the heading for this dialog?
+         */
+        "label"?: string;
+        /**
+          * What is the heading for this dialog?
+         */
+        "value"?: string;
+    }
+    interface RdsRadioGroup {
+        /**
+          * What is the heading for this dialog?
+         */
+        "label"?: string;
+    }
     interface IntrinsicElements {
         "my-component": MyComponent;
         "rds-button": RdsButton;
         "rds-dialog": RdsDialog;
+        "rds-radio": RdsRadio;
+        "rds-radio-group": RdsRadioGroup;
     }
 }
 export { LocalJSX as JSX };
@@ -186,6 +234,8 @@ declare module "@stencil/core" {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "rds-button": LocalJSX.RdsButton & JSXBase.HTMLAttributes<HTMLRdsButtonElement>;
             "rds-dialog": LocalJSX.RdsDialog & JSXBase.HTMLAttributes<HTMLRdsDialogElement>;
+            "rds-radio": LocalJSX.RdsRadio & JSXBase.HTMLAttributes<HTMLRdsRadioElement>;
+            "rds-radio-group": LocalJSX.RdsRadioGroup & JSXBase.HTMLAttributes<HTMLRdsRadioGroupElement>;
         }
     }
 }

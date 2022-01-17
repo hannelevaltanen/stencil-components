@@ -1,6 +1,7 @@
 @import url(./tokens/_colors.scss);
 @import url(./tokens/_radius.scss);
 @import url(./tokens/_shadow.scss);
+@import url(./tokens/_sizing.scss);
 @import url(./tokens/_spacing.scss);
 @import url(./tokens/_time.scss);
 @import url(./tokens/_typography.scss);
@@ -72,7 +73,7 @@ em {
   font-style: normal;
 }
 
-a {
+a:not([class]) {
   color: var(--color-primary);
   transition: var(--time-medium) ease;
   text-decoration: none;
@@ -175,9 +176,8 @@ p {
   &__link {
     display: block;
     color: inherit;
-    border: none;
-    border-radius: 0;
     padding: var(--spacing-s) var(--spacing-m);
+    text-decoration: none;
 
     &:hover {
       color: var(--color-white);
